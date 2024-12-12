@@ -1,4 +1,5 @@
 
+import ChairShowCase from "./components/chairShowCase/ChairShowcase";
 import FeaturedProducts from "./components/featureProduct/FeatureProduct";
 import Hero from "./components/hero/Hero";
 import Logos from "./components/logos/Logos";
@@ -14,6 +15,7 @@ export default function Home() {
       <Logos />
       <FeaturedProducts />
       <TopCategories />
+      <ChairShowCase />
       <Product />
       {/* <ProductPage /> */}
       

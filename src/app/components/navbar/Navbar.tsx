@@ -37,12 +37,13 @@ export default function Navbar() {
                     <h2 className='font-semibold text-[32px] px-2'>Comforty</h2>
                 </div>
 
-
+                <Link href={"/cart"}>
                 <div className='h-11 w-32 border border-gray-300 bg-white flex justify-center items-center'>
                     <Image src={"/Buy 2.png"} alt='' width={22} height={12} />
                     <h3 className='px-2'>Cart</h3>
                     <div className='h-5 w-5 rounded-full flex items-center justify-center bg-[#007580] text-white text-sm'>2</div>
                 </div>
+                </Link>
 
             </div>
 
@@ -51,7 +52,7 @@ export default function Navbar() {
                 <ul className='hidden text-lg font-normal md:flex md:gap-5  lg:gap-10 '>
                     <li className='hover:text-[#007580]'><Link href='/'>Home</Link></li>
                     <li className='hover:text-[#007580]'><Link href='/'>Shop</Link></li>
-                    <li className='hover:text-[#007580]'><Link href='./AllProducts'>Product</Link></li>
+                    <li className='hover:text-[#007580]'><Link href='./AllProducts/'>Product</Link></li>
                     <li className='hover:text-[#007580]'><Link href='/'>Pages</Link></li>
                     <li className='hover:text-[#007580]'><Link href='/'>About</Link></li>
                     
