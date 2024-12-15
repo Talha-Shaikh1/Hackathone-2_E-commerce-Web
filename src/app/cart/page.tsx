@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function CartPage() {
   const { cart, updateQuantity, removeFromCart } = useCart();
 
-  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity , 0);
 
   return (
     <div className="p-4">

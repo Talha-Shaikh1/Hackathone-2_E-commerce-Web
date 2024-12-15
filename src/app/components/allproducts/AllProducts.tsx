@@ -1,6 +1,7 @@
 
 import React from 'react';
 import OurProduct from '../ourProduct/OurProduct';
+import Link from 'next/link';
 
 const products = [
   { id: 1, name: 'Library Stool Chair', price: 20, image: '/Feature-product-1.png', isNew: true },
@@ -28,7 +29,7 @@ const AllProducts: React.FC = () => {
     
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <OurProduct key={product.id} product={product} />
+          <Link key={product.id} href={`/products/${product.id}`}><OurProduct key={product.id} product={product} /></Link>
         ))}
       </div>
     </div>

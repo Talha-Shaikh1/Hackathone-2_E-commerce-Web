@@ -82,7 +82,7 @@ const Footer = () => {
             <p className="flex justify-center items-center text-gray-500">
               &copy; 2021 - Blogy - Designed & Developed by <span className="text-teal-500 pl-2">Zakirsoft</span>
             </p>
-            <div className="flex justify-center space-x-4 mt-2">
+            <div className="flex justify-center space-x-4 mt-2 opacity-50">
               <Image src={'/footerlogo.png'} alt={"PayPal"} width={200} height={10} />
             </div>
           </div>

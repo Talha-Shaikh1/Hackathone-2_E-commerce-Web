@@ -1,6 +1,7 @@
 // pages/index.tsx
 import React from 'react';
 import OurProduct from './OurProduct';
+import Link from 'next/link';
 
 const products = [
   { id: 1, name: 'Library Stool Chair', price: 20, image: '/our-product-1.png', isNew: true },
@@ -20,7 +21,7 @@ const Product: React.FC = () => {
       <h1 className="text-2xl sm:text-3xl font-bold mb-12 md:mb-24 text-start">Our Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <OurProduct key={product.id} product={product} />
+          <Link key={product.id} href={`/products/${product.id}`}><OurProduct key={product.id} product={product} /></Link>
         ))}
       </div>
     </div>

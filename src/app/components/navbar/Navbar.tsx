@@ -1,9 +1,14 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { useCart } from '@/app/context/CartContext';
 
 export default function Navbar() {
+
+    const {cartCount} = useCart()
+
+
     return (
         <div>
             {/* Top Banner */}
@@ -41,7 +46,7 @@ export default function Navbar() {
                 <div className='h-11 w-32 border border-gray-300 bg-white flex justify-center items-center'>
                     <Image src={"/Buy 2.png"} alt='' width={22} height={12} />
                     <h3 className='px-2'>Cart</h3>
-                    <div className='h-5 w-5 rounded-full flex items-center justify-center bg-[#007580] text-white text-sm'>2</div>
+                    <div className='h-5 w-5 rounded-full flex items-center justify-center bg-[#007580] text-white text-sm'>{cartCount}</div>
                 </div>
                 </Link>
 
