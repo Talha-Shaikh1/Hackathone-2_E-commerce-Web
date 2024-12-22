@@ -1,5 +1,4 @@
 'use client'
-import { useCart } from '@/app/context/CartContext';
 import Image from 'next/image';
 import React from 'react';
 
@@ -14,13 +13,9 @@ interface Product {
   quantity?: number;
 }
 
-interface ProductCardProps {
-  product: Product;
-}
 
 const OurProduct: React.FC<{ product: Product }> = ({ product }) => {
 
-  const { addToCart } = useCart()
 
 
   return (
@@ -55,8 +50,6 @@ const OurProduct: React.FC<{ product: Product }> = ({ product }) => {
       </div>
       <button
         className="absolute bottom-4 right-2 text-white bg-[#F0F2F3] p-2 rounded-lg hover:bg-[#029FAE] transition"
-        // aria-label={`Add ${product.name} to cart`}
-        // onClick={() => addToCart({ ...product, quantity: product.quantity || 1 })}
       >
         <Image src={"/Buy 2.png"} alt='' width={22} height={12} />
       </button>

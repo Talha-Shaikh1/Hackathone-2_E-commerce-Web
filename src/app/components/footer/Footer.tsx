@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faInstagram, faPinterest, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -37,12 +38,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Category</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-teal-500">Sofa</a></li>
-              <li><a href="#" className="hover:text-teal-500">Armchair</a></li>
-              <li><a href="#" className="hover:text-teal-500">Wing Chair</a></li>
-              <li><a href="#" className="hover:text-teal-500">Desk Chair</a></li>
-              <li><a href="#" className="hover:text-teal-500">Wooden Chair</a></li>
-              <li><a href="#" className="hover:text-teal-500">Park Bench</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Sofa</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Armchair</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Wing Chair</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Desk Chair</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Wooden Chair</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Park Bench</a></li>
             </ul>
           </div>
   
@@ -50,10 +51,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-teal-500">Help & Support</a></li>
-              <li><a href="#" className="hover:text-teal-500">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-teal-500">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-teal-500">Help</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Help & Support</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Terms & Conditions</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-teal-500 hover:underline">Help</a></li>
             </ul>
           </div>
   
@@ -69,7 +70,8 @@ const Footer = () => {
                 placeholder="Your email"
                 className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
-              <button className="bg-teal-500 text-white md:px-0 px-4 py-2 rounded hover:bg-teal-700 md:mt-4">
+              <button onClick={() => {alert('subscription added sucessfully')}}
+              className="bg-[#029FAE] text-white md:px-0 px-4 py-2 rounded hover:bg-teal-700 md:mt-4">
                 Subscribe
               </button>
             </form>
@@ -82,8 +84,8 @@ const Footer = () => {
             <p className="flex justify-center items-center text-gray-500">
               &copy; 2021 - Blogy - Designed & Developed by <span className="text-teal-500 pl-2">Zakirsoft</span>
             </p>
-            <div className="flex justify-center space-x-4 mt-2 opacity-50">
-              <Image src={'/footerlogo.png'} alt={"PayPal"} width={200} height={10} />
+            <div className="sm:flex justify-center space-x-4 mt-2 hidden">
+              <Image src={'/footerlogo.png'} alt={"PayPal"} width={200} height={10}/>
             </div>
           </div>
         </div>

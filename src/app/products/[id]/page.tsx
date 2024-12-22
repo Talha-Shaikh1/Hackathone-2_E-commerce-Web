@@ -67,7 +67,11 @@ const products = [
     image: "/Feature-product-1.png",
     quantity: 1
   },
-  { id: 9, name: "Library Stool Chair", price: 20, image: "/Image.png",quantity: 1 },
+  { id: 9, 
+    name: "Library Stool Chair", 
+    price: 20, 
+    image: "/Image.png",
+    quantity: 1 },
   {
     id: 10,
     name: "Library Stool Chair",
@@ -104,13 +108,13 @@ export default function ProductDetails({ params }: Props) {
   const product = products.find((p) => p.id === parseInt(id));
 
   if (!product) {
-    notFound(); // Show 404 if product is not found
+    notFound();
   }
 
   return (
     <div className=" px-4 py-8 ">
       <div className="flex gap-8 items-center justify-center">
-        {/* Left Section: Product Image */}
+        
         <div className=" h-full md:h-96 ">
           <Image
             src={product.image}
@@ -121,7 +125,7 @@ export default function ProductDetails({ params }: Props) {
           />
         </div>
 
-        {/* Right Section: Product Details */}
+        
         <div className="flex flex-col justify-center">
           <div className="flex flex-col justify-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">

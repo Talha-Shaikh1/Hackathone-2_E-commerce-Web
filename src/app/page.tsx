@@ -15,8 +15,6 @@ export default function Home() {
       <FeaturedProducts />
       <TopCategories />
       <Product />
-      {/* <ProductPage /> */}
-      
     </div>
   );
 }
