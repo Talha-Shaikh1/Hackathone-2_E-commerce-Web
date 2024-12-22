@@ -181,7 +181,7 @@ const Navbar: React.FC = () => {
       <div className="w-full text-white h-[40px] bg-[#272343] flex items-center justify-around">
         <div className="flex justify-center items-center">
           <Image
-            src={"/vector.png"}
+            src={"/Vector.png"}
             alt=""
             width={12}
             height={12}
