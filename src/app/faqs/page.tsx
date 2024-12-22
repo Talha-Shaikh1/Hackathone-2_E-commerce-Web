@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-import { FaPlus } from 'react-icons/fa'
-import { useState } from 'react'
 import { BsPlus } from 'react-icons/bs'
 
 
@@ -45,16 +43,15 @@ const faqs = [
 
 function Faqs() {
 
-    const [answer , setAnswer] = useState(false)
 
   return (
     <div className='flex flex-col mx-auto items-center justify-center my-8'>
         <h1 className='text-3xl font-bold py-5'>Questions Looks Here</h1>
         <h2 className='pb-10 text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus ipsam voluptate totam!</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
-           {faqs.map((items) => {
+           {faqs.map((items, index) => {
             return(
-                <div className='p-3 rounded-lg md:w-[40vw] w-96 bg-gray-100 '>
+                <div className='p-3 rounded-lg md:w-[40vw] w-96 bg-gray-100 ' key={index}>
                     <div className='flex justify-between transition-all'>
                         <h2 className='text-lg font-bold'>
                             {items.question}

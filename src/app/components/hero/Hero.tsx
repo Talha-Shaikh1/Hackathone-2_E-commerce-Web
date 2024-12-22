@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 function Hero() {
   return (
-    <div className="flex items-center justify-center px-4 sm:px-8">
-      <div className="h-screen lg:h-[800px] relative w-full max-w-7xl bg-[#F0F2F3] overflow-hidden flex flex-col lg:flex-row justify-center items-center rounded-bl-xl">
+    <div className="flex items-center justify-center px-4 sm:px-8 ">
+      <div className="h-screen lg:h-[800px] w-full max-w-7xl bg-[#F0F2F3] overflow-hidden flex flex-col lg:flex-row justify-center items-center rounded-bl-xl">
 
         {/* Left Content */}
         <div className="flex flex-col justify-center z-20 px-8 lg:w-1/2 text-center lg:text-left">

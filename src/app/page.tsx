@@ -1,3 +1,4 @@
+import React from 'react';
 
 import FeaturedProducts from "./components/featureProduct/FeatureProduct";
 import Hero from "./components/hero/Hero";

@@ -1,4 +1,13 @@
 {
+
+  
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+  
+
   "env": {
     "browser": true,
     "es2021": true
@@ -6,13 +15,15 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "no-console": "warn",
     "react/prop-types": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

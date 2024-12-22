@@ -1,4 +1,5 @@
 'use client'
+import React from 'react';
 import { use } from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -113,9 +114,9 @@ export default function ProductDetails({ params }: Props) {
 
   return (
     <div className=" px-4 py-8 ">
-      <div className="flex gap-8 items-center justify-center">
+      <div className="flex gap-8 flex-col md:flex-row items-center justify-center">
         
-        <div className=" h-full md:h-96 ">
+        <div className=" h-full md:h-96">
           <Image
             src={product.image}
             alt={product.name}
@@ -126,8 +127,8 @@ export default function ProductDetails({ params }: Props) {
         </div>
 
         
-        <div className="flex flex-col justify-center">
-          <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center items-center md:items-start">
+          <div className="flex flex-col justify-center md:items-start items-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">
               {product.name}
             </h1>
@@ -137,9 +138,9 @@ export default function ProductDetails({ params }: Props) {
           </div>
 
           <hr className="my-6 w-80" />
-          <div className="w-96">
-            <p className="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic, fugit libero sapiente facilis dolore id. Facilis quaerat dolore deleniti vero, illum eligendi vitae minus labore voluptate optio? Asperiores, ex!</p>
-            <div className="mt-6 w-48 py-3 bg-[#029FAE] text-white text-lg font-medium rounded-md hover:bg-teal-600 transition duration-300 flex text-center justify-center">
+          <div className="w-96 flex flex-col justify-center items-center md:items-start">
+            <p className="text-gray-400 md:text-start text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic, fugit libero sapiente facilis dolore id. Facilis quaerat dolore deleniti vero, illum eligendi vitae minus labore voluptate optio? Asperiores, ex!</p>
+            <div className="mt-6 w-48 py-3 bg-[#029FAE] text-white text-lg font-medium rounded-md hover:bg-teal-600 transition duration-300 flex text-center justify-center items-center">
             <Image src={"/Group.png"} alt='' width={26} height={14} className="mr-4 text-white"/>
             <button onClick={() => addToCart({ ...product, quantity: product.quantity || 1 })}>
               Add to Cart

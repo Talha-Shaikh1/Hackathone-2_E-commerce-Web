@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+
 import { useCart } from '@/app/context/CartContext';
 import Image from 'next/image';
 import { FaRegHeart } from 'react-icons/fa';
@@ -30,7 +32,7 @@ export default function CartPage() {
                 </div>
 
                 {/* Item Details */}
-                <div className="flex-1 mt-4 md:mt-0 md:ml-6 ">
+                <div className="flex-1 mt-4 md:mt-0 md:ml-6">
                   <h2 className="text-lg font-semibold">{item.name}</h2>
                   <p className="text-gray-600">Ashen Slate/Cobalt Bliss</p>
                   <div className='flex items-center gap-6 '>
@@ -49,13 +51,13 @@ export default function CartPage() {
                   </div>
                   
                   </div>
-                  <div className='items-end flex h-10'>
+                  <div className='items-end flex h-10 justify-center md:justify-start mb-6'>
                     <button>
                      <FaRegHeart className=' text-black h-6 w-5' />
                     </button>
                   <button
                     onClick={() => removeFromCart(item.id)}
-                    className="ml-4 text-red-500 hover:underline"
+                    className="ml-4 text-red-500 hover:underline "
                   >
                     🗑️
                   </button>

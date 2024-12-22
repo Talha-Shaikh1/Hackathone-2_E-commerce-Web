@@ -1,4 +1,6 @@
 'use client'
+import React from 'react';
+
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faInstagram, faPinterest, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -19,16 +21,16 @@ const Footer = () => {
               Vivamus tristique odio sit amet velit semper, eu posuere turpis interdum. Cras egestas purus.
             </p>
             <div className="flex space-x-3 mt-4">
-              <div className="text-teal-500 hover:border flex border-teal-500 rounded-full p-2">
+              <div className="text-teal-500 hover:border flex border-teal-500 rounded-full p-1">
                 <FontAwesomeIcon icon={faTwitter} className="w-5"/>
               </div>
-              <div className="text-teal-500 hover:border flex border-teal-500 rounded-full p-2">
+              <div className="text-teal-500 hover:border flex border-teal-500 rounded-full p-1">
                 <FontAwesomeIcon icon={faInstagram} className="w-5"/>
               </div>
-              <div className="text-teal-500 hover:border flex border-teal-500 rounded-full p-2">
+              <div className="text-teal-500 hover:border flex border-teal-500 rounded-full p-1">
                 <FontAwesomeIcon icon={faPinterest} className="w-5"/>
               </div>
-              <div className="text-teal-500 hover:border flex border-teal-500 rounded-full p-2">
+              <div className="text-teal-500 hover:border flex border-teal-500 rounded-full p-1">
                 <FontAwesomeIcon icon={faYoutube} className="w-5"/>
               </div>
             </div>
